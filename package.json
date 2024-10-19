@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./bin/www",
-    "prod": "./bin/www"
+    "prod": "node ./bin/www"
   },
   "author": "Elvin",
   "license": "ISC",
