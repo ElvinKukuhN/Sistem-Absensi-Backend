@@ -1,0 +1,15 @@
+# Server Configuration
+PORT=3000
+
+# Database Configuration (MySQL)
+DB_HOST=sistem_absensi_absensi
+DB_USER=mysql
+DB_PASSWORD=absensi
+DB_NAME=sistem_absensi
+DB_PORT=3306
+
+# JWT Configuration
+JWT_SECRET=sistem_absenssi
+
+# Bcrypt Configuration
+BCRYPT_SALT_ROUNDS=10

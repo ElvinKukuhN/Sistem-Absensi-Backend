@@ -13,8 +13,10 @@ RUN npm install
 # Copy seluruh source code aplikasi ke working directory di container
 COPY . .
 
+COPY env/env-prod .env
+
 # Expose port 3000, aplikasi ini berjalan di port 3000
-EXPOSE 3000
+# EXPOSE 3000
 
 # Jalankan aplikasi (npm start)
 CMD ["npm","run", "prod"]
