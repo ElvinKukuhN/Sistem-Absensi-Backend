@@ -2,6 +2,7 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+var cors = require('cors')
 var logger = require('morgan');
 const link = require("./routes");
 
@@ -26,6 +27,7 @@ app.use(express.urlencoded({ extended: true }));
 // ROUTER
 app.use("/api/auth/", link.authRouter)
 app.use("/api/attendance/", link.attendanceRouter)
+app.use(cors)
 
 //Cek Koneksi DB
 app.get("/", async (req, res, next) => {
