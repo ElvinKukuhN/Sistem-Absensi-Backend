@@ -17,6 +17,8 @@ app.use(logger('dev'));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(cors())
+
 // Middleware to parse incoming JSON requests
 app.use(express.json());
 
@@ -27,7 +29,7 @@ app.use(express.urlencoded({ extended: true }));
 // ROUTER
 app.use("/api/auth/", link.authRouter)
 app.use("/api/attendance/", link.attendanceRouter)
-app.use(cors())
+
 
 //Cek Koneksi DB
 app.get("/", async (req, res, next) => {
